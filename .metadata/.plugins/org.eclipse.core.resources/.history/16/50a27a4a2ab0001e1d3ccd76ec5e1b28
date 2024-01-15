@@ -1,0 +1,17 @@
+package com.myWeb.www.repository;
+
+import java.util.List;
+
+import com.myWeb.www.domain.FileVO;
+
+public interface FileDAO {
+
+	int registerFile(FileVO fvo);
+
+	List<FileVO> fileList(int bno);
+
+	void fileModify(List<FileVO> flist);
+
+	int remove(String uuid);
+
+}

@@ -1,0 +1,8 @@
+package com.myWeb.www.repository;
+
+public class Snippet {
+	public static void main(String[] args) {
+		com.myWeb.www.repository
+	}
+}
+

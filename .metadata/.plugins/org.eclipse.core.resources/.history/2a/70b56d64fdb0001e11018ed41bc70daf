@@ -1,0 +1,9 @@
+package com.myWeb.www.security;
+
+public class MemberVO {
+	private String email;
+	private String pwd;
+	private String nick_name; 
+	private String regDate;
+	private String lastLogin;
+}

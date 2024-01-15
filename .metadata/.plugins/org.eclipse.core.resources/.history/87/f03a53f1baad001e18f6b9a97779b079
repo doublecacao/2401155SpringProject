@@ -1,0 +1,19 @@
+package com.myWeb.www;
+
+import javax.inject.Inject;
+
+import org.junit.Test;
+import org.springframework.test.context.ContextConfiguration;
+
+import com.myWeb.www.repository.BoardDAO;
+
+@ContextConfiguration(classes = {})
+public class BoardTest {
+	@Inject
+	private BoardDAO bdao;
+	
+	@Test
+	public void insertBoard() {
+		
+	}
+}

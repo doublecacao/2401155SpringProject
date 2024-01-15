@@ -1,0 +1,24 @@
+package com.myWeb.www.security;
+
+import javax.inject.Inject;
+
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+
+import com.myWeb.www.repository.MemberDAO;
+
+public class CustomAuthMemberService implements UserDetailsService {
+
+	@Inject
+	private MemberDAO bdao;
+	
+	@Override
+	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+		//username DB에 설정되어있는 email이 맞는지 체크
+		//인증하여
+		
+		return null;
+	}
+
+}

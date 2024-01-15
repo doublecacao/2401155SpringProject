@@ -1,0 +1,19 @@
+package com.myWeb.www;
+
+import javax.inject.Inject;
+
+import org.junit.Test;
+import org.springframework.test.context.ContextConfiguration;
+
+import com.myWeb.www.repository.BoardDAO;
+
+@ContextConfiguration(classes = {com.myWeb.www.config.RootConfig.class})	//classes 경로에 있는 대상자의 설정을 가져오는 어노테이션
+public class BoardTest {
+	@Inject
+	private BoardDAO bdao;
+	
+	@Test
+	public void insertBoard() {
+		
+	}
+}

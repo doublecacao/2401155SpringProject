@@ -1,0 +1,13 @@
+package com.myWeb.www.repository;
+
+import com.myWeb.www.security.MemberVO;
+
+public interface MemberDAO {
+
+	int memberRegister(MemberVO mvo);
+
+	int registerAuthInit(String email);
+
+	String dupEmail(String email);
+
+}

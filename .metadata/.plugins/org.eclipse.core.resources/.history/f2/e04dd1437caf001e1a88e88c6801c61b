@@ -1,0 +1,75 @@
+package com.myWeb.www.service;
+
+import java.util.List;
+
+import javax.inject.Inject;
+
+import org.springframework.stereotype.Service;
+
+import com.myWeb.www.domain.BoardDTO;
+import com.myWeb.www.domain.BoardVO;
+import com.myWeb.www.domain.PagingVO;
+import com.myWeb.www.repository.BoardDAO;
+
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
+@Service
+public class BoardServiceImpl implements BoardService{
+	@Inject
+	private BoardDAO bdao;
+
+	@Override
+	public int boardRegister(BoardDTO bdto) {
+		log.info("register service impl");
+		//bvo boardMapper / flist fileMapper 등록
+		bdao.boardRegister(bdto.getBvo());
+		
+		if(bdto.getFlist() == null) {
+			return isOk;
+		}
+		return 
+	}
+
+	@Override
+	public List<BoardVO> boardList(PagingVO pgvo) {
+		log.info("list service impl");
+		
+		return bdao.boardList(pgvo);
+	}
+
+	@Override
+	public BoardVO boardDetail(int bno) {
+		log.info("detail service impl");
+		
+		return bdao.boardDetail(bno);
+	}
+
+	@Override
+	public int boardDelete(int bno) {
+		log.info("delete service impl");
+		
+		return bdao.boardDelete(bno);
+	}
+
+	@Override
+	public int boardModify(BoardVO bvo) {
+		log.info("modify service impl");
+
+		return bdao.boardModify(bvo);
+	}
+
+	@Override
+	public int readCountIncrease(int bno) {
+		log.info("readCount service impl");
+		
+		return bdao.readCountIncrease(bno);
+	}
+
+	@Override
+	public int getTotalCount(PagingVO pgvo) {
+		log.info("totalCount service impl");
+		
+		return bdao.getTotalCount(pgvo);
+	}
+}

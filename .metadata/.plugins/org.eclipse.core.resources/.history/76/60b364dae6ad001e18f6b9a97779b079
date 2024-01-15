@@ -1,0 +1,11 @@
+package com.myWeb.www.repository;
+
+import com.myWeb.www.domain.CommentVO;
+
+public interface CommentDAO {
+
+	int post(CommentVO cvo);
+
+	int spread(long bno);
+
+}

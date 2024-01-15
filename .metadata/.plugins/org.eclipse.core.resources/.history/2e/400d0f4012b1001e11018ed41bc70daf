@@ -1,0 +1,17 @@
+package com.myWeb.www.service;
+
+import org.springframework.stereotype.Service;
+
+import com.myWeb.www.security.MemberVO;
+
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
+@Service
+public class MemberServiceImpl implements MemberService{@Override
+	public int memberRegister(MemberVO mvo) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

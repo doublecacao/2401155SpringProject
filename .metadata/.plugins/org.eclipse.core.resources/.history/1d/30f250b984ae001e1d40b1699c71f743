@@ -1,0 +1,36 @@
+package com.myWeb.www.service;
+
+import java.util.List;
+
+import javax.inject.Inject;
+
+import org.springframework.stereotype.Service;
+
+import com.myWeb.www.domain.CommentVO;
+import com.myWeb.www.domain.PagingVO;
+import com.myWeb.www.handler.PagingHandler;
+import com.myWeb.www.repository.CommentDAO;
+
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
+@Service
+public class CommentServiceImpl implements CommentService{
+	@Inject
+	private CommentDAO cdao;
+
+	@Override
+	public int post(CommentVO cvo) {
+		log.info("post service impl");
+		
+		return cdao.post(cvo);
+	}
+
+	@Override
+	public PagingHandler spread(long bno, PagingVO pgvo) {
+		log.info("spread service impl");
+		//ph객체 안에 cmtList 구성
+		
+		return cdao.spread(bno, pgvo);
+	}
+}
